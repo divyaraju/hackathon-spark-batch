@@ -1,0 +1,28 @@
+spark:
+  appName: HackathonSparkBatch
+  master: local[*]
+  options:
+    spark.serializer: org.apache.spark.serializer.JavaSerializer
+    spark.scheduler.mode: FAIR
+    es.nodes: ldp-elastic-balancer-dev.lumeris.io
+    es.net.http.auth.user: elastic
+    es.net.http.auth.pass: changeme
+ 
+defaults:
+  exceptionHandler:
+    type: SimpleExceptionHandler
+  
+spring:
+  redis:
+    cluster:
+      nodes:
+        - ldp-redis-balancer-dev.lumeris.io:6379
+      
+aws:
+  region: us-west-2
+  accessKey: AKIAI2NDMH5F7BCS7YYQ
+  secretKey: 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   
+
+logging:
+  level:
+    com.lumeris.dataplatform: DEBUG

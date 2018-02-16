@@ -1,0 +1,17 @@
+name: Adt
+
+sources:
+  - type: FileSource
+    extensions: 
+        filePath: C:\Users\spenmetsa\Downloads\hackathon_encounter.txt
+
+processors:
+  - type: BpmProcessor
+    extensions:
+      artifact: com.lumeris.dataplatform:hackathon-enhance-encounter:0.0.1-SNAPSHOT
+      processId: Hl7XmlToEncounter
+
+#sinks:
+#  - type: 'KafkaSink'
+#    extensions:
+#      stream: 'hackathon'
