@@ -9,9 +9,10 @@ processors:
   - type: BpmProcessor
     extensions:
       artifact: com.lumeris.dataplatform:hackathon-enhance-encounter:0.0.1-SNAPSHOT
-      processId: defaultPackage.AdtEncounter
+      processId: AdtA01Encounter
 
-#sinks:
-#  - type: 'KafkaSink'
-#    extensions:
-#      stream: 'hackathon'
+sinks:
+  - type: 'KafkaSink'
+    extensions:
+      topic: hackathon
+      wait: true

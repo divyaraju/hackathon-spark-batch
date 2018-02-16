@@ -18,10 +18,12 @@ spring:
       nodes:
         - ldp-redis-balancer-dev.lumeris.io:6379
       
-aws:
-  region: us-west-2
-  accessKey: AKIAI2NDMH5F7BCS7YYQ
-  secretKey: 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   
+server:
+    port: 8089
+kafka:
+  bootstrap-servers: 10.80.94.110:9092
+  topic:
+    hackathon: hackathon 
 
 logging:
   level:
